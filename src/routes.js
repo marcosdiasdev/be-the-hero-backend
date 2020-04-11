@@ -1,15 +1,23 @@
 const express = require('express');
+const OngController = require('./controllers/OngController');
+const IncidentController = require('./controllers/IncidentController');
+const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
+routes.post('/sessions', SessionController.create);
 
-    console.log(request.params);
+routes.get('/ongs', OngController.index);
+routes.get('/ongs/:id', OngController.find);
+routes.post('/ongs', OngController.create);
 
-    return response.json({
-        name: "Arnold Schwarzenegger",
-        message: "Hasta la vista, babe!"
-    });
-})
+routes.get('/profile', ProfileController.index);
+
+routes.get('/incidents', IncidentController.index);
+routes.post('/incidents', IncidentController.create);
+routes.delete('/incidents/:id', IncidentController.delete);
+
+
 
 module.exports = routes;
