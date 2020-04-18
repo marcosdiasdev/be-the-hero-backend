@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Be The Hero" src="https://github.com/timarcosdias/be-the-hero-frontend/blob/master/src/assets/img/logo.svg?raw=true">
+  <img alt="Be The Hero" src="https://raw.githubusercontent.com/timarcosdias/be-the-hero-frontend/master/src/assets/img/logo.svg?sanitize=true">
 </p>
 
 ## Running this application
